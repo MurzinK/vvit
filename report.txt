@@ -1,1 +1,9 @@
-report github
+1. Устанавливаем git 
+2. Открываем git bash и создаем репозиторий proekt, при помощи команды mkdir proekt, например создадим в корневой директории
+   Инициализируем репозиторий при помощи команды git init
+3. Создаем файл report.txt и пишем в файл описания шагов которые мы выполняем
+4. Фиксируем изменения, добавляем файл в ветку при помощи команды git add report.txt и фиксируем при помощи коммит, git commit -m "Report created"
+5. Создаем новую ветку для отчета, при помощи команды git checkout -b report-branch, добавляем описания шагов и сохраняем изменения при помощи git add report.txt и git commit -m "Added steps"
+6. Соединим шаги, вернемся в ветку master, при помощи git checkout master и соединими изменения, git merge report-branch
+7. Заходим на github, создаем новый репозиторий vvit, в git bash добавляем удаленный репозиторий, git remote add origin https://github.com/логин/vvit.git, загружаем все на github при помощи git push -u origin master
+8. Размещаем статический сайт, создаем в репозитории папку docs и помещаем файлы статического сайта, в git bash выполняем git add docs/* и git commit -m "A static website has been added" и качаем изменения, переходим на github и включаем github pages показав что файлы находятся в ветке master или в папке docs
